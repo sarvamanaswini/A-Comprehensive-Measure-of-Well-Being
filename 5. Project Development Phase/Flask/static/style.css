@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* Loads your local background image file overlayed with dark blue tinting mask */
+    background: linear-gradient(rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.9)), 
+                url('world-map-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #ff3333; /* Vibrant crimson heading red */
+    font-size: 2.6rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Translucent Frosted Glass Card Panel Container */
+.form-card {
+    background: rgba(10, 15, 30, 0.65);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 40px 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+/* Custom Rounded Pill Selection Boxes & Text Inputs */
+select, input[type="number"] {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 180, 216, 0.4);
+    background: rgba(10, 25, 47, 0.5);
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+select:focus, input:focus {
+    border-color: #00b4d8;
+    box-shadow: 0 0 12px rgba(0, 180, 216, 0.5);
+    background: rgba(10, 25, 47, 0.75);
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.95rem;
+}
+
+/* Gradient Action Button Layouts */
+.predict-btn {
+    width: 60%;
+    padding: 12px 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #4ea8de 0%, #a2d2ff 45%, #7209b7 100%);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(114, 9, 183, 0.4);
+}
+
+.predict-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(114, 9, 183, 0.7);
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #4ea8de;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #a2d2ff;
+}

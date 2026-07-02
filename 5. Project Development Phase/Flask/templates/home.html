@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDI Prediction System - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .navbar {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            width: auto;
+        }
+        .nav-predict-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #ffffff;
+            background: linear-gradient(135deg, #4ea8de 0%, #7209b7 100%);
+            padding: 10px 25px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 12px rgba(114, 9, 183, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .nav-predict-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(114, 9, 183, 0.5);
+        }
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="/predict_form" class="nav-predict-btn">Predict →</a>
+    </div>
+
+    <div class="container" style="margin-top: 60px;">
+        <h1>Human Development Index</h1>
+        
+        <div class="form-card" style="margin-top: 25px;">
+            <h2 style="margin-bottom: 20px; font-size: 1.6rem; color: #00b4d8;">About Human Development Index (HDI)</h2>
+            <p class="intro-text">
+                The Human Development Index (HDI) is a summary measure of average achievement in key dimensions of human development: a long and healthy life, being knowledgeable, and having a decent standard of living. 
+            </p>
+            <p class="intro-text">
+                It is used globally to capture the health, education, and economic status of a nation, serving as a critical metric for policy makers and researchers to evaluate long-term national progress.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

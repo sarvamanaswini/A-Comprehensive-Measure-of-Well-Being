@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDI Prediction Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Human Development Index</h1>
+        
+        <div class="form-card" style="margin-top: 25px;">
+            <form action="/predict" method="POST">
+                
+                <div class="form-group">
+                    <select name="country" required>
+                        <option value="" disabled selected>Select the name of the Country</option>
+                        <option value="India">India</option>
+                        <option value="United States">United States</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Australia">Australia</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <input type="number" name="life_exp" step="any" min="30" max="80" placeholder="Enter Life expectancy rate (range 30-80)" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="number" name="schooling" step="any" min="1" max="15" placeholder="Enter Mean years of schooling (range 1-15)" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="number" name="gni" step="any" min="40" max="140000" placeholder="Enter GNI (range 40-140000)" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="number" name="internet_users" step="any" placeholder="Enter the number of internet users" required>
+                </div>
+
+                <button type="submit" class="predict-btn">Predict</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
